@@ -80,12 +80,15 @@ public class AnnotationLookup {
     FREQ_KEY(CoreAnnotations.FreqAnnotation.class, "freq"),
     WEB_KEY(CoreAnnotations.WebAnnotation.class, "web"),
 
+    // HaPM: add Job Title
+    JOB_TITLE_KEY(CoreAnnotations.JobTitleAnnotation.class, "jobTitle"),
+
     // Also have "pos" for PartOfTag (POS is also the TAG_KEY - "tag", but "pos" makes more sense)
     // Still keep "tag" for POS tag so we don't break anything
     POS_TAG_KEY(CoreAnnotations.PartOfSpeechAnnotation.class, "pos");
 
-    // HaPM: add Job Title
-    JOB_TITLE_KEY(CoreAnnotations.JobTitleAnnotation.class, "jobTitle");
+
+
 
     public final Class coreKey;
     public final String oldKey;
