@@ -84,6 +84,8 @@ public class AnnotationLookup {
     // Still keep "tag" for POS tag so we don't break anything
     POS_TAG_KEY(CoreAnnotations.PartOfSpeechAnnotation.class, "pos");
 
+    // HaPM: add Job Title
+    JOB_TITLE_KEY(CoreAnnotations.JobTitleAnnotation.class, "jobTitle");
 
     public final Class coreKey;
     public final String oldKey;

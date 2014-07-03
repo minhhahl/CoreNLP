@@ -746,6 +746,8 @@ public class SeqClassifierFlags implements Serializable {
   // to label the token
   public boolean useLabelSource = false;
 
+  // HaPM: add Job Title entity
+  public boolean useJobTitle = true;
   /**
    * Whether to (not) lowercase tokens before looking them up in distsim
    * lexicon. By default lowercasing was done, but now it doesn't have to be
@@ -2526,6 +2528,9 @@ public class SeqClassifierFlags implements Serializable {
         terminateOnAvgImprovement = Boolean.parseBoolean(val);
 
         // ADD VALUE ABOVE HERE
+      // HaPM: add Job Title entity
+      } else if (key.equalsIgnoreCase("useJobTitle")){
+          useJobTitle = Boolean.parseBoolean(val);
       } else if (key.length() > 0 && !key.equals("prop")) {
         System.err.println("Unknown property: |" + key + '|');
       }

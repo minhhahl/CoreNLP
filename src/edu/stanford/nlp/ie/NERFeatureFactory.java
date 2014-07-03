@@ -756,6 +756,11 @@ public class NERFeatureFactory<IN extends CoreLabel> extends FeatureFactory<IN> 
 
     Collection<String> featuresC = new ArrayList<String>();
 
+
+      if(flags.useJobTitle){
+          featuresC.add(c.get(CoreAnnotations.JobTitleAnnotation.class)+"-JOBTITLE");
+      }
+
     if (flags.useDistSim) {
       distSimAnnotate(cInfo);
     }

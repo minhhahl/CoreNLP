@@ -47,6 +47,13 @@ public class CoreAnnotations {
   private CoreAnnotations() {
   } // only static members
 
+   // HaPM: add Job Title Anno
+  public static class JobTitleAnnotation implements CoreAnnotation<String> {
+      public Class<String> getType() {
+          return String.class;
+      }
+  }
+
   /**
    * The CoreMap key identifying the annotation's text.
    *
